@@ -1,0 +1,211 @@
+.hero-section {
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+.hero-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+}
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba(41, 35, 27, 0.412);
+}
+.overlay-white { background: rgba(254, 247, 245, 0.7) !important; }
+
+.hero-overlay-decor-1, .hero-overlay-decor-2 {
+  position: absolute; 
+  width: 30%; 
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  z-index: 3;
+}
+.hero-overlay-decor-3, .hero-overlay-decor-4, .hero-overlay-leaf-1, .hero-overlay-leaf-2, .hero-overlay-leaf-3, .hero-overlay-leaf-4 {
+  position: absolute; 
+}
+.hero-overlay-decor-1 {
+  top: 0;
+}
+.hero-overlay-decor-2 {
+  bottom: 0;
+}
+.hero-overlay-decor-3 {
+  z-index: 3;
+  width: 20%; 
+  top: 0;
+  left:0;
+}
+.hero-overlay-decor-4 {
+  z-index: 3;
+  width: 20%; 
+  bottom: 0;
+  right:0;
+}
+.hero-overlay-leaf-1 {
+  z-index: 2;
+  width: 10%; 
+  top: 3em;
+  left:0;
+}
+.hero-overlay-leaf-2 {
+  z-index: 2;
+  width: 30%; 
+  top: 0;
+  left:0;
+}
+.hero-overlay-leaf-3 {
+  z-index: 2;
+  width: 10%; 
+  bottom: 3em;
+  right:0;
+}
+.hero-overlay-leaf-4 {
+  z-index: 2;
+  width: 30%; 
+  bottom: 0;
+  right:0;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 1230px;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.hero-title {
+  font-size: 80px;
+  line-height: 85px;
+  font-weight: 800;
+  -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+          transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  -webkit-transform-origin: 50% 50% 0px;
+      -ms-transform-origin: 50% 50% 0px;
+          transform-origin: 50% 50% 0px;
+  text-align: center;
+}
+.hero-desc, .hero-dear, .hero-desc-2 {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  font-weight: normal;
+  letter-spacing: .6rem;
+  justify-content: center;
+}
+.line-black::before, .line-black::after { background-color: #000 !important; }
+.hero-desc::before, .hero-desc::after, .hero-desc-2::before, .hero-desc-2::after {
+  background-color: #fff;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 5.5rem;
+  height: 2px;
+}
+.hero-desc::before {
+  left: -30%;
+}
+.hero-desc::after {
+  right: -30%;
+}
+.hero-desc-2::before {
+  left: -80%;
+}
+.hero-desc-2::after {
+  right: -80%;
+}
+.hero-dear {
+  margin-top: -1.5rem !important;
+  margin-bottom: 1rem;
+}
+.hero-content-decor {
+  width: 75%;
+  margin-top: 1rem;
+}
+.countdown label {
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border-radius: .5rem !important;
+  letter-spacing: .2rem;
+}
+.countdown-black label {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-title {
+    font-size: 48px;
+    line-height: 56px;
+    text-align: left;
+  }
+  .hero-content-decor {
+    width: 100%;
+  }
+  .hero-overlay-decor-1, .hero-overlay-decor-2 {
+    position: absolute; 
+    width: 70%; 
+  }
+  .hero-overlay-decor-3, .hero-overlay-decor-4 {
+    width: 50%;
+  }
+  .hero-overlay-leaf-1, .hero-overlay-leaf-3 {
+    width: 20%;
+  }
+  .hero-overlay-leaf-2, .hero-overlay-leaf-4 {
+    width: 70%;
+  }
+  .hero-dear {
+    margin-top: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .hero-desc {
+    max-width: 300px;
+  }
+  .hero-desc::before {
+    left: -10%;
+  }
+  .hero-desc::after {
+    right: -10%;
+  }
+}
